@@ -33,6 +33,9 @@ HTML, CSS, JavaScript
 
 ## Screenshot
 
+This screenshot shows user's initials and their highscores.
+
+<img width="928" alt="Screenshot 2023-12-05 at 18 47 10" src="https://github.com/goalzz/JavaScriptQuiz/assets/124784722/71db4001-fae7-4bc1-9b98-aef75e169be0">
 
 ## Deployement 
 
