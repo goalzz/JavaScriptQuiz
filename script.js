@@ -52,24 +52,9 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     
     ];
-    
-    // adding function to show elements when quiz starts
-    function showQuizElements() {
-        document.getElementById("question-container").style.display = "block";
-        document.getElementById("answers-container").style.display = "block";
-        document.getElementById("result-container").style.display = "block";
-        document.getElementById("score-container").style.display = "block";
-        document.getElementById("initials-container").style.display = "block";
-        document.getElementById("buttons-container").style.display = "block";
-        document.getElementById("high-scores").style.display = "block";
-        document.getElementById("timer-container").style.display = "block";
-    }
 
     function startQuiz() {
         startBtn.style.display = "none";
-        document.getElementById("quiz-info").style.display = "none"; // hide quiz info 
-        document.getElementById("start-btn").style.display = "none";
-        showQuizElements();
         displayQuestion();
         startTimer();
     }
