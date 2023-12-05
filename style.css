@@ -78,6 +78,36 @@ button:hover {
     background-color: #60819d;
 }
 
+#initials-container {
+    display: none;
+    margin-top: 20px;
+}
+
+#initials-container label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#initials-container input {
+    width: 10%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#save-btn {
+    display: block;
+    width: 20%;
+    padding: 10px;
+    margin-left: 40%;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+#save-btn:hover {
+    background-color: #acc8ad;
+}
+
 #high-scores {
     display: block;
 }
