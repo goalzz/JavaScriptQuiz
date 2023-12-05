@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Displaying an alert with instructions before user starts the quiz
     alert("Welcome to the JavaScript Fundamentals Quiz!\n\nFor each incorrect answer, 10 seconds will be deducted from your total time. Good Luck!");
 
-        startBtn.style.display = "none";
+        startBtn.classList.add("hidden");
         displayQuestion();
         startTimer();
     }
@@ -125,15 +125,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
         scoreContainer.textContent = "Your Score: " + scoreFraction + " | Time taken: " + timeTaken + " seconds";
 
-        initialsContainer.style.display = "block";
+        initialsContainer.classList.remove("hidden");
     }
 
     function displayHighScores() {
-        // Assuming you have an element with id "high-scores" to display the high scores
         const highScoresContainer = document.getElementById("high-scores");
 
         if (highScoresContainer) {
-        highScoresContainer.innerHTML = "<h2>Highscore</h2>";
+        highScoresContainer.innerHTML = "<h2>Highscore:</h2>";
 
         // Display high scores
         highScores.forEach((entry, index) => {
@@ -147,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function saveHighScores() {
-        // Save high scores to local storage
+        // Saves high scores to local storage
         localStorage.setItem("highScores", JSON.stringify(highScores));
     }
 
@@ -168,13 +167,13 @@ document.addEventListener("DOMContentLoaded", function () {
         if (initials.trim() !== "") {
             highScores.push({ initials: initials, score: score });
 
-            // Sort high scores in descending order
+            // Sorting high scores in descending order
             highScores.sort((a, b) => b.score - a.score);
 
-            // Display high scores
+            // Displays high scores
             displayHighScores();
 
-            // Save high scores to local storage
+            // Saves high scores to local storage
             saveHighScores();
 
             alert("High score saved!");
@@ -183,10 +182,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-     // adding an event listener to toggle highscore + styling it briefly
+     // adding an event listener to toggle highscore 
     toggleScoresBtn.addEventListener("click", function () {
         const highScoresContainer = document.getElementById("high-scores");
-        highScoresContainer.style.display = highScoresContainer.style.display === "none" ? "block" : "none";
+        highScoresContainer.classList.toggle("hidden");
     });
 
     // adding an event listener to clear highscore
