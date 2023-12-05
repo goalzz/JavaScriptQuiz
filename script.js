@@ -54,6 +54,9 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
     function startQuiz() {
+        // Displaying an alert with instructions before user starts the quiz
+    alert("Welcome to the JavaScript Fundamentals Quiz!\n\nFor each incorrect answer, 10 seconds will be deducted from your total time. Good Luck!");
+
         startBtn.style.display = "none";
         displayQuestion();
         startTimer();
@@ -180,7 +183,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-     // adding an event listener to toggle highscore
+     // adding an event listener to toggle highscore + styling it briefly
     toggleScoresBtn.addEventListener("click", function () {
         const highScoresContainer = document.getElementById("high-scores");
         highScoresContainer.style.display = highScoresContainer.style.display === "none" ? "block" : "none";
