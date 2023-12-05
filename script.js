@@ -133,21 +133,19 @@ document.addEventListener("DOMContentLoaded", function () {
     function displayHighScores() {
         const highScoresContainer = document.getElementById("high-scores");
         const toggleScoresBtn = document.getElementById("toggle-scores-btn");
-
+        
         // Hiding the high scores display initially
         highScoresContainer.style.display = "none";
 
        // event listener for the "Highscore" button
         toggleScoresBtn.addEventListener("click", function() {
-         if (highScoresContainer.style.display === "none") {
-            highScoresContainer.style.display = "block";
-        } else {
-            highScoresContainer.style.display = "none";
-        }
+        // Displaying the scores when the button is clicked
+        highScoresContainer.style.display = "block";
+
         });
 
         if (highScoresContainer) {
-        highScoresContainer.innerHTML = "<h2>Highscore:</h2>";
+        highScoresContainer.innerHTML = "<h2>Your Saved Highscore:</h2>";
 
         // Display high scores
         highScores.forEach((entry, index) => {
