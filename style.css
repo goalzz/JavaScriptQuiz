@@ -47,6 +47,10 @@ button:hover {
     background-color: #60819d; 
     }  
 
+.hidden {
+    display: none;
+}
+
 #result-container {
     color: green; /*  color for correct answers */
     }
@@ -79,7 +83,7 @@ button:hover {
 }
 
 #initials-container {
-    display: none;
+    /*display: none;*/
     margin-top: 20px;
 }
 
@@ -89,7 +93,7 @@ button:hover {
 }
 
 #initials-container input {
-    width: 10%;
+    width: 50%;
     padding: 10px;
     margin-bottom: 10px;
 }
@@ -110,4 +114,8 @@ button:hover {
 
 #high-scores {
     display: block;
+}
+
+#high-scores.hidden {
+    display: none;
 }

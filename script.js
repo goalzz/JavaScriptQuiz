@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let timerInterval;
     let highScores = [];
 
+    initialsContainer.style.display = "none"; // user won't see the initials input from the start
 
     const questions = [
     {
@@ -112,6 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function endQuiz() {
+        console.log("endQuiz function executed.");
         questionContainer.textContent = "Quiz Over!";
         answersContainer.innerHTML = "";
         resultContainer.textContent = "";
@@ -125,11 +127,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
         scoreContainer.textContent = "Your Score: " + scoreFraction + " | Time taken: " + timeTaken + " seconds";
 
-        initialsContainer.classList.remove("hidden");
+        initialsContainer.style.display = "block";
     }
 
     function displayHighScores() {
         const highScoresContainer = document.getElementById("high-scores");
+        const toggleScoresBtn = document.getElementById("toggle-scores-btn");
+
+        // Hiding the high scores display initially
+        highScoresContainer.style.display = "none";
+
+       // event listener for the "Highscore" button
+        toggleScoresBtn.addEventListener("click", function() {
+         if (highScoresContainer.style.display === "none") {
+            highScoresContainer.style.display = "block";
+        } else {
+            highScoresContainer.style.display = "none";
+        }
+        });
 
         if (highScoresContainer) {
         highScoresContainer.innerHTML = "<h2>Highscore:</h2>";
@@ -161,27 +176,21 @@ document.addEventListener("DOMContentLoaded", function () {
     //adding an event listener for the save button
 
     saveBtn.addEventListener("click", function () {
+        console.log("Save button clicked.");
         const initialsInput = document.getElementById("initials");
-        const initials = initialsInput.value.toUpperCase(); // Convert to uppercase
-
+        const initials = initialsInput.value.toUpperCase();
+    
         if (initials.trim() !== "") {
             highScores.push({ initials: initials, score: score });
-
-            // Sorting high scores in descending order
             highScores.sort((a, b) => b.score - a.score);
-
-            // Displays high scores
             displayHighScores();
-
-            // Saves high scores to local storage
             saveHighScores();
-
             alert("High score saved!");
         } else {
             alert("Please enter your initials.");
         }
     });
-
+    
      // adding an event listener to toggle highscore 
     toggleScoresBtn.addEventListener("click", function () {
         const highScoresContainer = document.getElementById("high-scores");
