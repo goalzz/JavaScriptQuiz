@@ -6,24 +6,78 @@ body {
     padding: 0;
     }
 
+h1 {
+    padding-bottom: 30px;
+}
 #quiz-container {
     max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
+    margin: 40px auto;
+    padding: 30px;
+    padding-top: 20px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-
+    
 button {
+    display: block; 
+    width: 30%;
     padding: 10px;
-    margin: 5px;
+    margin: 10px;
+    margin-left: 30%;
+    background-color: rgb(27, 102, 159);
+    cursor: pointer;
     }
 
-#result-container {
-    color:red;
-}
+button:hover {
+    background-color: #60819d; /*added the on hover effect*/
+    }
 
+#start-btn, #submit-btn {
+    padding: 8px; 
+    width: 20%;
+    margin: 3px;
+    margin-left: 35%;
+    background-color: rgb(27, 102, 159);
+    cursor: pointer;
+    }
+
+#start-btn:hover,
+#submit-btn:hover {
+    background-color: #60819d; 
+    }  
+
+#result-container {
+    color: green; /*  color for correct answers */
+    }
+    
+#result-container.incorrect {
+    color: red; /* color for incorrect answers*/
+    }
+    
 #score-container {
     margin-top: 20px;
+    background-color: rgb(27, 102, 159);
+}
+
+#buttons-container {
+    display: flex;
+    margin-top: 10px;
+    margin-left: 22%;
+}
+#toggle-scores-btn,
+#clear-scores-btn {
+    padding: 8px;
+    margin: 3px;
+    background-color: rgb(27, 102, 159);
+    cursor: pointer;
+}
+
+#toggle-scores-btn:hover,
+#clear-scores-btn:hover {
+    background-color: #60819d;
+}
+
+#high-scores {
+    display: block;
 }
