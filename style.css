@@ -38,7 +38,7 @@ button:hover {
     width: 20%;
     margin: 3px;
     margin-left: 35%;
-    background-color: rgb(27, 102, 159);
+    background-color: rgb(147, 199, 238);
     cursor: pointer;
     }
 
@@ -73,7 +73,7 @@ button:hover {
 #clear-scores-btn {
     padding: 8px;
     margin: 3px;
-    background-color: rgb(27, 102, 159);
+    background-color: rgb(147, 199, 238);
     cursor: pointer;
 }
 
@@ -103,13 +103,13 @@ button:hover {
     width: 20%;
     padding: 10px;
     margin-left: 40%;
-    background-color: #4caf50;
-    color: #fff;
+    background-color: #4ca94f;
+    color: #000000;
     border: none;
     cursor: pointer;
 }
 #save-btn:hover {
-    background-color: #acc8ad;
+    background-color: #7fc181;
 }
 
 #high-scores {
